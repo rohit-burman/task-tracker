@@ -18,6 +18,12 @@ import java.util.UUID;
 
 @RestController
 @RequestMapping(path = "api/v1/tasks")
+@CrossOrigin(
+        origins = {
+                "https://task-tracker-production-b534.up.railway.app/",
+                "http://localhost:8080/"
+        }
+)
 public class TaskController {
     private final TaskService taskService;
     private final TaskMapper taskMapper;

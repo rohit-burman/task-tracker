@@ -6,7 +6,8 @@
 // ==========================================
 // CONFIGURATION
 // ==========================================
-const API_BASE_URL = 'http://localhost:8080/api/v1/tasks';
+//const API_BASE_URL = 'http://localhost:8080/api/v1/tasks';
+const API_BASE_URL = 'https://task-tracker-production-b534.up.railway.app/api/v1/tasks';
 
 // ==========================================
 // STATE MANAGEMENT
