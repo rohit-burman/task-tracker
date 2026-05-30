@@ -1,8 +1,10 @@
 package com.rohit.TaskApp.mapper.impl;
 
 import com.rohit.TaskApp.domain.CreateTaskRequest;
+import com.rohit.TaskApp.domain.UpdateTaskRequest;
 import com.rohit.TaskApp.domain.dto.CreateTaskRequestDto;
 import com.rohit.TaskApp.domain.dto.TaskDto;
+import com.rohit.TaskApp.domain.dto.UpdateTaskRequestDto;
 import com.rohit.TaskApp.domain.entity.Task;
 import com.rohit.TaskApp.mapper.TaskMapper;
 import org.springframework.stereotype.Component;
@@ -29,6 +31,17 @@ public class TaskMapperImpl implements TaskMapper {
                 task.getDueDate(),
                 task.getPriority(),
                 task.getStatus()
+        );
+    }
+
+    @Override
+    public UpdateTaskRequest fromDto(UpdateTaskRequestDto dto) {
+        return new UpdateTaskRequest(
+                dto.title(),
+                dto.description(),
+                dto.dueDate(),
+                dto.priority(),
+                dto.status()
         );
     }
 }
